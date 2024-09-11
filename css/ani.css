@@ -1,0 +1,81 @@
+/* 아래에서 위로 올라오는 애니 */
+.ani.y_bottom{
+    opacity: 0;
+    transform: translateY(40px);
+}
+.ani.y_bottom.on{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease-in-out;
+}
+
+/* 밖(왼쪽)에서 안으로 들어오는 애니 */
+.ani.x_left{
+    opacity: 0;
+    transform: translateX(-40px);
+}
+.ani.x_left.on{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+.ani.x_right{
+    opacity: 0;
+    transform: translateX(40px);
+}
+.ani.x_right.on{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+/* 이미지가 커진상태에서 원래 이미지로 애니 */
+.ani.imgscale img{
+    opacity: 0;
+    transform: scale(1.2);
+}
+.ani.imgscale.on img{
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1s ease-in-out;
+}
+
+/* 시간차 */
+.ani.delay02.y_bottom.on{
+    transition-delay: 0.2s;
+}
+.ani.delay03{
+    transition-delay: 0.3s;
+}
+.ani.delay04.y_bottom.on{
+    transition-delay: 0.4s;
+}
+.ani.delay05{
+    transition-delay: 0.5s;
+}
+.ani.delay06.y_bottom.on{
+    transition-delay: 0.6s;
+}
+.ani.delay07{
+    transition-delay: 0.7s;
+}
+.ani.delay08{
+    transition-delay: 0.8s;
+}
+.ani.delay09.y_bottom.on{
+    transition-delay: 0.9s;
+}
+
+/* cover ani */
+.ani.cover2::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 1s ease-in-out;
+}
+.ani.cover2.on::before{
+    height: 0;
+}
